@@ -156,6 +156,3 @@ def format_period(city: City, data: dict[str, Any], period: str) -> str:
         return format_day(city, data, 1, "ertaga")
     return format_week(city, data)
 
-
-def format_daily_message(city: City, data: dict[str, Any]) -> str:
-    return "☀️ <b>Xayrli tong!</b> Bugungi ob-havo:\n\n" + format_day(city, data, 0, "bugun")

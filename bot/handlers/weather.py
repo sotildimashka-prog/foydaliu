@@ -19,16 +19,16 @@ CHOOSE_CITY = "🏙 <b>Shaharlar</b>\n\nShaharni tanlang:"
 @router.message(Command("weather"))
 @router.message(F.text == WEATHER_BTN)
 async def cmd_weather(message: Message) -> None:
-    await message.answer(CHOOSE_CITY, reply_markup=cities_kb("w"))
+    await message.answer(CHOOSE_CITY, reply_markup=cities_kb())
 
 
 @router.callback_query(NavCB.filter(F.to == "cities"))
 async def back_to_cities(cq: CallbackQuery) -> None:
-    await _safe_edit(cq, CHOOSE_CITY, cities_kb("w"))
+    await _safe_edit(cq, CHOOSE_CITY, cities_kb())
     await cq.answer()
 
 
-@router.callback_query(CityCB.filter(F.action == "w"))
+@router.callback_query(CityCB.filter())
 async def on_city(cq: CallbackQuery, callback_data: CityCB) -> None:
     city = CITIES.get(callback_data.city)
     if not city:

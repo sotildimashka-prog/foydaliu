@@ -8,11 +8,8 @@ router = Router()
 
 HELP = (
     "🤖 <b>Ob-havo boti</b>\n\n"
-    "🌤 /weather — ob-havoni ko'rish (shahar → davr)\n"
-    "🔔 /subscribe — kunlik ob-havoga obuna bo'lish\n"
-    "⏰ /settime — xabar vaqtini o'zgartirish\n"
-    "📋 /mysub — obuna holati\n"
-    "🔕 /unsubscribe — obunani bekor qilish\n"
+    "🌤 /weather — ob-havoni ko'rish\n"
+    "Avval shaharni, keyin davrni tanlang: Hozir | Bugun | Ertaga | 7 kunlik\n\n"
     "❓ /help — yordam"
 )
 
